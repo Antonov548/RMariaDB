@@ -39,7 +39,7 @@ cpp11::writable::list MariaResultSimple::get_column_info() {
 cpp11::list MariaResultSimple::fetch(int /*n_max*/) {
   LOG_VERBOSE;
 
-  cpp11::warning("Use dbExecute() instead of dbGetQuery() for statements, and also avoid dbFetch()");
+  //cpp11::warning("Use dbExecute() instead of dbGetQuery() for statements, and also avoid dbFetch()");
   return df_create(std::vector<MariaFieldType>(), std::vector<std::string>(), 0);
 }
 

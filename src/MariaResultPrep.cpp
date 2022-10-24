@@ -171,7 +171,7 @@ cpp11::list MariaResultPrep::fetch(int n_max) {
     cpp11::stop("Query needs to be bound before fetching");
   if (!has_result()) {
     if (names_.size() == 0) {
-      cpp11::warning("Use dbExecute() instead of dbGetQuery() for statements, and also avoid dbFetch()");
+      //cpp11::warning("Use dbExecute() instead of dbGetQuery() for statements, and also avoid dbFetch()");
     }
     return df_create(types_, names_, 0);
   }
