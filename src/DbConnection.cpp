@@ -14,7 +14,11 @@ DbConnection::~DbConnection() {
   LOG_VERBOSE;
 
   if (is_valid()) {
-    //cpp11::warning("call dbDisconnect() when finished working with a connection");
+    try{
+      cpp11::warning("call dbDisconnect() when finished working with a connection");
+    } catch(const std::exception& e) {
+      Rf_warningcall(R_NilValue, e.what());
+    }
     disconnect();
   }
 }
@@ -85,11 +89,11 @@ void DbConnection::disconnect() {
   if (!is_valid()) return;
 
   if (has_query()) {
-    // cpp11::warning(
-    //   "%s\n%s",
-    //   "There is a result object still in use.",
-    //   "The connection will be automatically released when it is closed"
-    // );
+    cpp11::warning(
+      "%s\n%s",
+      "There is a result object still in use.",
+      "The connection will be automatically released when it is closed"
+    );
   }
 
   try {
@@ -157,7 +161,7 @@ void DbConnection::set_current_result(DbResult* pResult) {
 
   if (pCurrentResult_ != NULL) {
     if (pResult != NULL)
-      //cpp11::warning("Cancelling previous query");
+      cpp11::warning("Cancelling previous query");
 
     pCurrentResult_->close();
   }
