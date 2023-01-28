@@ -1,5 +1,16 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# RMariaDB 1.2.2.9004 (2023-01-28)
+
+## Chore
+
+- Update gitpod configuration.
+
+## Uncategorized
+
+- PLACEHOLDER https://github.com/Antonov548/RMariaDB/pull/286 (#286).
+
+
 # RMariaDB 1.2.2.9003 (2023-01-24)
 
 ## Chore
