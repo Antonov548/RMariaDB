@@ -2,7 +2,7 @@
 #
 # Call:
 # quote(cynkrathis::use_gitpod())
-image: mariadb:10.8.2
+image: gitpod/workspace-mysql
 
 tasks:
   - name: dependencies
