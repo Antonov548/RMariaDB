@@ -2,7 +2,7 @@
 #
 # Call:
 # quote(cynkrathis::use_gitpod())
-image: mariadb
+image: mariadb:10.8.2
 
 tasks:
   - name: dependencies
